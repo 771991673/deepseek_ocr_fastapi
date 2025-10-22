@@ -1,0 +1,40 @@
+[project]
+name = "deepseek-ocr-fastapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch",
+    "torchvision==0.24.0",
+    "transformers==4.46.3",
+    "tokenizers",
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "python-multipart",
+    "PyMuPDF",
+    "img2pdf",
+    "Pillow",
+    "numpy",
+    "einops",
+    "easydict",
+    "addict",
+    "accelerate>=1.11.0",
+    "matplotlib>=3.10.7",
+]
+
+
+
+torch = [
+  { index = "pytorch-cu126" },
+]
+
+torchvision = [
+  { index = "pytorch-cu126" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
